@@ -15,6 +15,8 @@ classifiers =
 
     content += f"""
 [options]
+package_dir=
+    =src
 packages = {project_name}
 """
     return content
