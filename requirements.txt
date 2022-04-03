@@ -1,0 +1,2 @@
+slim~=dev
+setuptools~=58.1.0
