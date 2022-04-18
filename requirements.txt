@@ -1,2 +1,2 @@
 slim~=dev
-setuptools~=58.1.0
+setuptools~=62.1.0
