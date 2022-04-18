@@ -2,30 +2,30 @@ import os
 
 from slim.file_tools import read_json_file
 
-from builder_dash.license_mit import license_mit
-from builder_dash.readme_rst import readme_rst
-from builder_dash.setup_cfg import setup_cfg
-from builder_dash.setup_py import setup_py
+from .license_mit import license_mit
+from .readme_rst import readme_rst
+from .setup_cfg import setup_cfg
+from .setup_py import setup_py
 
-slim_folder = f'{os.path.expanduser("~")}/slim/projects'
-root_folder = f'{os.path.expanduser("~")}/Project'
-organisation = 'tsvenson'
+slim_folder: str = f'{os.path.expanduser("~")}/slim/projects'
+root_folder: str = f'{os.path.expanduser("~")}/Project'
+organisation: str = 'tsvenson'
 
 project_data = read_json_file(f'{slim_folder}/scb_tools.json')
 
 
-def machine_name(project_name):
+def machine_name(project_name: str) -> str:
     name_temp = project_name.lower()
     result = name_temp.replace(' ', '_')
     return result
 
 
-def make_file(path, content=''):
+def make_file(path: str, content: str = '') -> None:
     with open(path, 'w') as f:
         f.write(content)
 
 
-def main():
+def main() -> None:
     project_root = f'{root_folder}/{organisation}'
     project_name = machine_name(project_data["name"])
     project_path = f'{project_root}/{project_name}'
@@ -46,7 +46,7 @@ def main():
         print(f'Project "{project_path}" already exists!')
 
 
-def main2():
+def main2() -> None:
     print(project_data)
 
 

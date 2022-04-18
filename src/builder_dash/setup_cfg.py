@@ -1,4 +1,7 @@
-def setup_cfg(config_data: dict, project_name: str):
+from typing import Dict, Any
+
+
+def setup_cfg(config_data: Dict[Any, Any], project_name: str) -> str:
     content = f"""[metadata]
 name = {project_name}
 version = {config_data['version']}
