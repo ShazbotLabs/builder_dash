@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "builder_dash"
+version = "0.0.0"
+authors = [
+    {name = "Thomas Svensson", email = "thomas@tsvenson.com"},
+]
+description = "Building and management tools for ShazbotLabs projects."
+readme = "README.rst"
+requires-python = ">=3.11"
+keywords = ["organizer", "console"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "slim @ git+https://github.com/ShazbotLabs/slim.git",
+    "mindy @ git+https://github.com/ShazbotLabs/mindy.git",
+]
+
+[project.scripts]
+builda = "builder_dash.bd:main"
+
+[project.urls]
+homepage = "https://github.com/ShazbotLabs/builder_dash"
