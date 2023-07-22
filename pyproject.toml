@@ -9,7 +9,7 @@ authors = [
     {name = "Thomas Svensson", email = "thomas@tsvenson.com"},
 ]
 description = "Building and management tools for ShazbotLabs projects."
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.11"
 keywords = ["organizer", "console"]
 license = {text = "MIT"}
