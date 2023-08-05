@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [project.scripts]
-builda = "builder_dash.bd:main"
+builda = "builder_dash.main:app"
 
 [project.urls]
 homepage = "https://github.com/ShazbotLabs/builder_dash"
